@@ -31,6 +31,8 @@ class Circle:
         >>> c3 = c1.add_area(c2)
         >>> c3.get_radius()
         5.0
+        >>> c3.get_area()
+        78.53981633974483
 
         """
         r1 = self.get_radius()
