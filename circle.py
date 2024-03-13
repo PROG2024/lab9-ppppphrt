@@ -48,6 +48,11 @@ class Circle:
         return math.pi*self.radius*self.radius
     
     def get_radius(self) -> float:
+        """
+        >>> c = Circle(7)
+        >>> c.get_radius()
+        7
+        """
         return self.radius
 
     def __str__(self) -> str:
