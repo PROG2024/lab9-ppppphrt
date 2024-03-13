@@ -33,10 +33,7 @@ class Counter:
             cls.instance = super().__new__(cls)
         return cls.instance
 
-    def __repr__(self):
-        return f"Counter({self.__count})"
-
 
 # if __name__ == "__main__":
-#     c = Counter()
+#     c = Counter()git
 #     print(c.increment())
