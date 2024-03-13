@@ -13,6 +13,7 @@ from counter import Counter
 
 class TestCounter(unittest.TestCase):
     def test_singleton(self):
+        """ Verify that Counter is a singleton """
         c1 = Counter()
         c2 = Counter()
         self.assertIs(c1, c2)
@@ -22,3 +23,15 @@ class TestCounter(unittest.TestCase):
         self.assertEqual(c2.count, 1)
         c2.increment()
         self.assertEqual(c1.count, 2)
+
+    def test_not_reset_to_zero(self):
+        """ Count is not reset to 0 when you invoke after the first time """
+        c1 = Counter()
+        c2 = Counter()
+        self.assertEqual(c1.count, 0)
+        self.assertEqual(c2.count, 0)
+        c1.increment()
+        self.assertEqual(c2.count, 1)
+        c2.increment()
+        self.assertEqual(c1.count, 2)
+

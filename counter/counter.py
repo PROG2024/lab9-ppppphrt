@@ -18,12 +18,10 @@ class Counter:
     def __str__(self):
         return f"{self.__count}"
 
-    # TODO write count property
     @property
     def count(self):
         return self.__count
 
-    # TODO write increment method
     def increment(self):
         self.__count += 1
         return self.__count
@@ -32,8 +30,3 @@ class Counter:
         if not hasattr(cls, 'instance'):
             cls.instance = super().__new__(cls)
         return cls.instance
-
-
-# if __name__ == "__main__":
-#     c = Counter()git
-#     print(c.increment())
